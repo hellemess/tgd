@@ -1,0 +1,25 @@
+{
+  "name": "tgd",
+  "version": "1.0.0",
+  "description": "the landing page of the global day of jewish learning",
+  "scripts": {
+    "build": "gulp build",
+		"start": "npm run build && gulp watch"
+  },
+  "author": "hellemess",
+  "license": "ISC",
+	"devDependencies": {
+		"autoprefixer": "^8.6.5",
+		"browser-sync": "^2.24.5",
+		"del": "^3.0.0",
+		"gulp": "^3.9.1",
+		"gulp-csso": "^3.0.1",
+		"gulp-imagemin": "^4.1.0",
+		"gulp-jsmin": "^0.1.5",
+		"gulp-less": "^3.5.0",
+		"gulp-plumber": "^1.2.0",
+		"gulp-postcss": "^7.0.1",
+		"postcss-preset-env": "^5.2.1",
+		"run-sequence": "^2.2.1"
+	}
+}
