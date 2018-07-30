@@ -1,3 +1,8 @@
+::selection {
+  color: @contrast-color;
+  background: lighten(@theme-color-2, 5%);
+}
+
 html {
 	box-sizing: border-box;
 }
@@ -13,7 +18,7 @@ body {
 	margin: 0;
 
 	font-family: @font-family;
-	font-size: @mobile-font-size;
+	font-size: @mobile-size;
 	line-height: @line-height;
 
 	color: @main-color;
@@ -21,20 +26,34 @@ body {
 	border-top: 4px solid @theme-color-1;
 }
 
+.mobile-hidden {
+	display: none;
+}
+
 @media (min-width: @tablet) {
 	body {
 		font-size: @font-size;
+	}
+
+	.mobile-hidden {
+		display: block;
+	}
+}
+
+@media (min-width: @small-desktop) {
+	.desktop-hidden {
+		display: none;
 	}
 }
 
 @media (min-width: @desktop) {
 	body {
-		font-size: @desktop-font-size;
+		font-size: @desktop-size;
 	}
 }
 
 @media (min-width: @large-desktop) {
 	body {
-		font-size: @large-desktop-font-size;
+		font-size: @large-desktop-size;
 	}
 }

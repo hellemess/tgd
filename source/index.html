@@ -7,6 +7,17 @@
 	<title>День еврейских знаний в Санкт-Петербурге</title>
 </head>
 <body>
+  <svg style="display: none;">
+    <symbol id="circle-inner" viewBox="0 0 92.604 92.604">
+      <path d="M77.39 46.31a31.094 31.094 0 0 1-19.196 28.727 31.094 31.094 0 0 1-33.886-6.74 31.094 31.094 0 0 1-6.74-33.887 31.094 31.094 0 0 1 28.727-19.195" fill="none" stroke-width="30.427" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="circle-middle" viewBox="0 0 198.438 198.438">
+      <path d="M183.222 99.225a84.01 84.01 0 0 1-51.86 77.615 84.01 84.01 0 0 1-91.554-18.21 84.01 84.01 0 0 1-18.21-91.554 84.01 84.01 0 0 1 77.614-51.861" fill="none" stroke-width="30.427" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="circle-outer" viewBox="0 0 304.271 304.271">
+      <path d="M289.057 152.14a136.927 136.927 0 0 1-84.527 126.504 136.927 136.927 0 0 1-149.221-29.682A136.927 136.927 0 0 1 25.627 99.741 136.927 136.927 0 0 1 152.13 15.214" fill="none" stroke-width="30.427" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
 
   <header class="header">
     <div class="header__container">
@@ -30,12 +41,74 @@
     </div>
   </header>
   <main>
-    <section>
-      <h1>
-        <span>День еврейских знаний в Санкт-Петербурге</span>
-        <span>Тексты и странствия: пути в неизведанное</span>
-      </h1>
-      <time datetime="2018-11-11 11:00">11 ноября 2018 года</time>
+    <section class="welcome">
+      <div class="welcome__circles">
+        <svg class="welcome__circle  welcome__circle--outer" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#circle-outer"></use>
+        </svg>
+        <svg class="welcome__circle  welcome__circle--middle" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#circle-middle"></use>
+        </svg>
+        <svg class="welcome__circle  welcome__circle--inner" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#circle-inner"></use>
+        </svg>        
+      </div>
+      <div class="welcome__container">
+        <h1 class="welcome__heading">
+          <span class="welcome__topic">
+            Тексты
+            <br>и странствия:
+            <br>пути
+            <br class="mobile-hidden">в неизведанное
+          </span>
+          <span class="welcome__title">
+            Всемирный день еврейских знаний
+            <br>в Санкт-Петербурге
+          </span>
+        </h1>
+        <time class="welcome__when" datetime="2018-11-11 12:00">
+          <span class="welcome__date">11 ноября 2018 года</span>
+          <span class="welcome__time">12:00–18:00</span>
+        </time>
+      </div>
+      <section class="welcome__highlights  mobile-hidden">
+        <h2 class="welcome__caption">В программе:</h2>
+        <ul class="welcome__highlights-list">
+          <li class="welcome__highlights-item">Творческие мастер-классы: «Зентангл еврейских имен», «Маски путешественников»</li>
+          <li class="welcome__highlights-item">Творческие мастер-классы: «Зентангл еврейских имен», «Маски путешественников»</li>
+          <li class="welcome__highlights-item">Творческие мастер-классы: «Зентангл еврейских имен», «Маски путешественников»</li>
+          <li class="welcome__highlights-item">Творческие мастер-классы: «Зентангл еврейских имен», «Маски путешественников»</li>
+          <li class="welcome__highlights-item">Творческие мастер-классы: «Зентангл еврейских имен», «Маски путешественников»</li>
+        </ul>
+      </section>
+      <section class="welcome__highlights  mobile-hidden">
+        <h2 class="welcome__caption">
+          Лекторы
+          <br class="desktop-hidden">и презентеры:
+        </h2>
+        <ul class="welcome__highlights-list">
+          <li class="welcome__highlights-item">
+            Андрей Боровский
+            <span class="welcome__about">Художник, искусствовед, музеолог</span>
+          </li>
+          <li class="welcome__highlights-item">
+            Андрей Боровский
+            <span class="welcome__about">Художник, искусствовед, музеолог</span>
+          </li>
+          <li class="welcome__highlights-item">
+            Андрей Боровский
+            <span class="welcome__about">Художник, искусствовед, музеолог</span>
+          </li>
+          <li class="welcome__highlights-item">
+            Андрей Боровский
+            <span class="welcome__about">Художник, искусствовед, музеолог</span>
+          </li>
+          <li class="welcome__highlights-item">
+            Андрей Боровский
+            <span class="welcome__about">Художник, искусствовед, музеолог</span>
+          </li>
+        </ul>
+      </section>
     </section>
   </main>
 
