@@ -1,6 +1,7 @@
 .welcome {
 	position: relative;
 
+	height: ~"calc(100vh - 139px)";
 	overflow: hidden;
 }
 
@@ -85,7 +86,7 @@
 
 .welcome__title {
 	display: block;
-	margin-top: 25px;
+	margin-top: 15px;
 	font-size: @mobile-size;
 	line-height: 1.2;
 	text-transform: uppercase;
@@ -124,6 +125,7 @@
 @media (min-width: @tablet) {
 	.welcome {
 		display: flex;
+		height: auto;
 
 		justify-content: space-between;
 	}
@@ -254,6 +256,10 @@
 		width: 400px;
 	}
 
+	.welcome__when {
+		margin-top: 30px;
+	}
+
   .welcome__topic {
 		font-size: @desktop-h1-size;
 	}
@@ -326,6 +332,7 @@
 
 	.welcome__when {
 		width: 488px;
+		margin-top: 50px;
 	}
 
 	.welcome__highlights {
