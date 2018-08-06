@@ -13,44 +13,64 @@
     });
   };
 
-	const disableBtns = (currentPosition, itemsCount) => {
-		prevBtn.disabled = currentPosition === 0 ? true : false;
+	const enableSwitch = (element) => {
+		const disableBtns = (currentPosition, itemsCount) => {
+			element.prevBtn.disabled = currentPosition === 0 ? true : false;
 
-		if (window.innerWidth < 768) {
-			nextBtn.disabled = currentPosition === - (itemsCount - 1) * 100 ? true : false;
-		} else {
-			nextBtn.disabled = currentPosition === - (itemsCount - 1) * 100 / 2 + 50 ? true : false;
-		} 
-	};
-
-	const frame = document.querySelector(`.speakers__frame`);
-	const prevBtn = frame.querySelector(`.speakers__btn--prev`);
-	const nextBtn = frame.querySelector(`.speakers__btn--next`);
-	const content = frame.querySelector(`.speakers__list`);
-	const itemsCount = content.children.length;
-
-	let currentPosition = 0;
-
-	disableBtns(currentPosition, itemsCount);
-
-	const switchItems = (evt) => {
-		if (!evt.target.disabled && evt.target === prevBtn) {
 			if (window.innerWidth < 768) {
-				currentPosition += 100;
+				element.nextBtn.disabled = currentPosition === - (itemsCount - 1) * 100 ? true : false;
 			} else {
-				currentPosition += 50;
+				element.nextBtn.disabled = currentPosition === - (itemsCount - 1) * 100 / 2 + 50 ? true : false;
 			}
-		} else if (!evt.target.disabled && evt.target === nextBtn) {
-			if (window.innerWidth < 768) {
-				currentPosition -= 100;
-			} else {
-				currentPosition -= 50;
-			}
-		}
+		};
 
-		content.style.left = `${currentPosition}%`;
+		const itemsCount = element.content.children.length;
+
+		let currentPosition = 0;
+
 		disableBtns(currentPosition, itemsCount);
+
+		const switchItems = (evt) => {
+			if (!evt.target.disabled && evt.target === element.prevBtn) {
+				if (window.innerWidth < 768) {
+					currentPosition += 100;
+				} else {
+					currentPosition += 50;
+				}
+			} else if (!evt.target.disabled && evt.target === element.nextBtn) {
+				if (window.innerWidth < 768) {
+					currentPosition -= 100;
+				} else {
+					currentPosition -= 50;
+				}
+			}
+
+			element.content.style.left = `${currentPosition}%`;
+			disableBtns(currentPosition, itemsCount);
+	  }
+
+		addHandler(element.frame, switchItems);
 	}
 
-	addHandler(frame, switchItems);
+	const speakers = {
+		frame: document.querySelector(`.speakers__frame`),
+		prevBtn: document.querySelector(`.speakers__btn--prev`),
+		nextBtn: document.querySelector(`.speakers__btn--next`),
+		content: document.querySelector(`.speakers__list`)
+	};
+
+	enableSwitch(speakers);
+
+	const rooms = document.querySelectorAll(`.schedule__container`);
+
+	rooms.forEach((it) => {
+		const room = {
+			frame: it.querySelector(`.schedule__frame`),
+			prevBtn: it.querySelector(`.schedule__btn--prev`),
+			nextBtn: it.querySelector(`.schedule__btn--next`),
+			content: it.querySelector(`.schedule__list`)
+		}
+
+		enableSwitch(room);
+	});
 })();
