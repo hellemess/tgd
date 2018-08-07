@@ -3,3 +3,43 @@
 		transform: rotate(0deg);
 	}
 }
+
+@keyframes circles {
+	0% {
+		box-shadow:
+		  0 0 0 20px fade(@contrast-color, 35%),
+			0 0 0 0 fade(@contrast-color, 35%);
+	}
+
+	50% {
+		box-shadow:
+		  0 0 0 40px fade(@contrast-color, 0),
+			0 0 0 20px fade(@contrast-color, 35%);
+	}
+
+	50.0000001% {
+		box-shadow:
+		  0 0 0 0 fade(@contrast-color, 35%),
+			0 0 0 20px fade(@contrast-color, 35%);
+	}
+
+	100% {
+		box-shadow:
+		  0 0 0 20px fade(@contrast-color, 35%),
+			0 0 0 40px fade(@contrast-color, 0);
+	}
+}
+
+@keyframes blink {
+  0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

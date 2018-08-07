@@ -17,9 +17,6 @@
     <symbol id="circle-outer" viewBox="0 0 304.271 304.271">
       <path d="M289.057 152.14a136.927 136.927 0 0 1-84.527 126.504 136.927 136.927 0 0 1-149.221-29.682A136.927 136.927 0 0 1 25.627 99.741 136.927 136.927 0 0 1 152.13 15.214" fill="none" stroke-width="30.427" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
-    <symbol id="arrow" viewBox="0 0 199.404 199.404">
-      <path d="M135.412 0L35.709 99.702l99.703 99.702 28.283-28.285-71.418-71.417 71.418-71.417z"/>
-    </symbol>
   </svg>
 
   <header class="header">
@@ -117,7 +114,7 @@
       <h2 class="speakers__heading">Лекторы и презентеры</h2>
       <div class="speakers__frame">
         <button class="speakers__btn  speakers__btn--prev" type="button" aria-label="Посмотреть других лекторов и презентеров"></button>
-        <button class="speakers__btn  speakers__btn--next" type="button" aria-label="Посмотреть других лекторов и презентеров"></button>
+        <button class="speakers__btn  speakers__btn--next  speakers__btn--notice" type="button" aria-label="Посмотреть других лекторов и презентеров"></button>
         <ul class="speakers__list">
           <li class="speakers__item">
             <div class="speakers__picture">
@@ -185,22 +182,10 @@
     <section class="schedule" id="schedule">
       <h2 class="schedule__heading">Программа</h2>
       <div class="schedule__container">
-        <div class="schedule__room">
-          Атриум
-          <button class="schedule__btn  schedule__btn--prev" type="button" aria-label="Посмотреть другие занятия в этом помещении">
-            <svg width="20" height="20" aria-hidden="true">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"></use>
-            </svg>
-          </button>
-          <button class="schedule__btn  schedule__btn--next" type="button" aria-label="Посмотреть другие занятия в этом помещении">
-            <svg width="20" height="20" aria-hidden="true">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"></use>
-            </svg>
-          </button>
-        </div>
+        <div class="schedule__room">Атриум</div>
         <div class="schedule__frame">
           <ul class="schedule__list">
-            <li class="schedule__item">
+            <li class="schedule__item  schedule__item--common">
               <time class="schedule__time" datetime="2018-11-11 12:30">12:30</time>
               <ol class="schedule__parallel-list">
                 <li class="schedule__parallel-item">Книжная ярмарка от «Подписных изданий»</li>
@@ -227,22 +212,14 @@
               <h3 class="schedule__session">Розыгрыш благотворительной лотереи</h3>
             </li>
           </ul>
+          <div class="schedule__switch">
+            <button class="schedule__btn  schedule__btn--prev" type="button" aria-label="Посмотреть другие занятия в этом помещении"></button>
+            <button class="schedule__btn  schedule__btn--next  schedule__btn--notice" type="button" aria-label="Посмотреть другие занятия в этом помещении"></button>
+          </div>
         </div>
       </div>
       <div class="schedule__container">
-        <div class="schedule__room">
-          Библиотека
-          <button class="schedule__btn  schedule__btn--prev" type="button" aria-label="Посмотреть другие занятия в этом помещении">
-            <svg width="20" height="20" aria-hidden="true">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"></use>
-            </svg>
-          </button>
-          <button class="schedule__btn  schedule__btn--next" type="button" aria-label="Посмотреть другие занятия в этом помещении">
-            <svg width="20" height="20" aria-hidden="true">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"></use>
-            </svg>
-          </button>
-        </div>
+        <div class="schedule__room">Библиотека</div>
         <div class="schedule__frame">
           <ul class="schedule__list">
             <li class="schedule__item">
@@ -252,9 +229,9 @@
                 Фудшеринг — бесплатная еда или экологический проект?
               </h3>
             </li>
-            <li class="schedule__item">
+            <li class="schedule__item  schedule__item--recreation">
               <time class="schedule__time" datetime="2018-11-11 13:30">13:30</time>
-              <div>Перерыв</div>
+              <div class="schedule__recreation">Перерыв</div>
             </li>
             <li class="schedule__item">
               <time class="schedule__time" datetime="2018-11-11 13:45">13:45</time>
@@ -263,9 +240,9 @@
                 Экологические основы еврейской традиции
               </h3>
             </li>
-            <li class="schedule__item">
+            <li class="schedule__item  schedule__item--recreation">
               <time class="schedule__time" datetime="2018-11-11 14:45">14:45</time>
-              <div>Перерыв</div>
+              <div class="schedule__recreation">Перерыв</div>
             </li>
             <li class="schedule__item">
               <time class="schedule__time" datetime="2018-11-11 15:00">15:00</time>
@@ -274,9 +251,9 @@
                 Проблемы экологии в Торе
               </h3>
             </li>
-            <li class="schedule__item">
+            <li class="schedule__item  schedule__item--recreation">
               <time class="schedule__time" datetime="2018-11-11 16:00">16:00</time>
-              <div>Перерыв</div>
+              <div class="schedule__recreation">Перерыв</div>
             </li>
             <li class="schedule__item">
               <time class="schedule__time" datetime="2018-11-11 16:15">16:15</time>
@@ -286,22 +263,14 @@
               </h3>
             </li>
           </ul>
+          <div class="schedule__switch">
+            <button class="schedule__btn  schedule__btn--prev" type="button" aria-label="Посмотреть другие занятия в этом помещении"></button>
+            <button class="schedule__btn  schedule__btn--next" type="button" aria-label="Посмотреть другие занятия в этом помещении"></button>
+          </div>
         </div>
       </div>
       <div class="schedule__container">
-        <div class="schedule__room">
-          Зал «Адаин Ло»
-          <button class="schedule__btn  schedule__btn--prev" type="button" aria-label="Посмотреть другие занятия в этом помещении">
-            <svg width="20" height="20" aria-hidden="true">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"></use>
-            </svg>
-          </button>
-          <button class="schedule__btn  schedule__btn--next" type="button" aria-label="Посмотреть другие занятия в этом помещении">
-            <svg width="20" height="20" aria-hidden="true">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"></use>
-            </svg>
-          </button>
-        </div>
+        <div class="schedule__room">Зал «Адаин Ло»</div>
         <div class="schedule__frame">
           <ul class="schedule__list">
             <li class="schedule__item">
@@ -311,9 +280,9 @@
                 Экология — дело каждого
               </h3>
             </li>
-            <li class="schedule__item">
+            <li class="schedule__item  schedule__item--recreation">
               <time class="schedule__time" datetime="2018-11-11 13:30">13:30</time>
-              <div>Перерыв</div>
+              <div class="schedule__recreation">Перерыв</div>
             </li>
             <li class="schedule__item">
               <time class="schedule__time" datetime="2018-11-11 13:45">13:45</time>
@@ -323,9 +292,9 @@
               </h3>
               <small>Холл, 3-й этаж, «Гранатик»</small>
             </li>
-            <li class="schedule__item">
+            <li class="schedule__item  schedule__item--recreation">
               <time class="schedule__time" datetime="2018-11-11 14:45">14:45</time>
-              <div>Перерыв</div>
+              <div class="schedule__recreation">Перерыв</div>
             </li>
             <li class="schedule__item">
               <time class="schedule__time" datetime="2018-11-11 15:00">15:00</time>
@@ -334,9 +303,9 @@
                 Как безопасно ездить по городу на велосипеде зимой и летом
               </h3>
             </li>
-            <li class="schedule__item">
+            <li class="schedule__item  schedule__item--recreation">
               <time class="schedule__time" datetime="2018-11-11 16:00">16:00</time>
-              <div>Перерыв</div>
+              <div class="schedule__recreation">Перерыв</div>
             </li>
             <li class="schedule__item">
               <time class="schedule__time" datetime="2018-11-11 16:15">16:15</time>
@@ -346,22 +315,14 @@
               </h3>
             </li>
           </ul>
+          <div class="schedule__switch">
+            <button class="schedule__btn  schedule__btn--prev" type="button" aria-label="Посмотреть другие занятия в этом помещении"></button>
+            <button class="schedule__btn  schedule__btn--next" type="button" aria-label="Посмотреть другие занятия в этом помещении"></button>
+          </div>
         </div>
       </div>
       <div class="schedule__container">
-        <div class="schedule__room">
-          3.46
-          <button class="schedule__btn  schedule__btn--prev" type="button" aria-label="Посмотреть другие занятия в этом помещении">
-            <svg width="20" height="20" aria-hidden="true">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"></use>
-            </svg>
-          </button>
-          <button class="schedule__btn  schedule__btn--next" type="button" aria-label="Посмотреть другие занятия в этом помещении">
-            <svg width="20" height="20" aria-hidden="true">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow"></use>
-            </svg>
-          </button>
-        </div>
+        <div class="schedule__room">3.46</div>
         <div class="schedule__frame">
           <ul class="schedule__list">
             <li class="schedule__item">
@@ -371,9 +332,9 @@
                 Культура как хаос: классика русского постмодернизма
               </h3>
             </li>
-            <li class="schedule__item">
+            <li class="schedule__item  schedule__item--recreation">
               <time class="schedule__time" datetime="2018-11-11 13:30">13:30</time>
-              <div>Перерыв</div>
+              <div class="schedule__recreation">Перерыв</div>
             </li>
             <li class="schedule__item">
               <time class="schedule__time" datetime="2018-11-11 13:45">13:45</time>
@@ -382,9 +343,9 @@
                 Игра как миф
               </h3>
             </li>
-            <li class="schedule__item">
+            <li class="schedule__item  schedule__item--recreation">
               <time class="schedule__time" datetime="2018-11-11 14:45">14:45</time>
-              <div>Перерыв</div>
+              <div class="schedule__recreation">Перерыв</div>
             </li>
             <li class="schedule__item">
               <time class="schedule__time" datetime="2018-11-11 15:00">15:00</time>
@@ -393,9 +354,9 @@
                 Бейт-мидраш как способ работы с текстами
               </h3>
             </li>
-            <li class="schedule__item">
+            <li class="schedule__item  schedule__item--recreation">
               <time class="schedule__time" datetime="2018-11-11 16:00">16:00</time>
-              <div>Перерыв</div>
+              <div class="schedule__recreation">Перерыв</div>
             </li>
             <li class="schedule__item">
               <time class="schedule__time" datetime="2018-11-11 16:15">16:15</time>
@@ -405,6 +366,10 @@
               </h3>
             </li>
           </ul>
+          <div class="schedule__switch">
+            <button class="schedule__btn  schedule__btn--prev" type="button" aria-label="Посмотреть другие занятия в этом помещении"></button>
+            <button class="schedule__btn  schedule__btn--next" type="button" aria-label="Посмотреть другие занятия в этом помещении"></button>
+          </div>
         </div>
       </div>
     </section>
