@@ -1,0 +1,78 @@
+.back {
+	position: fixed;
+	right: 15px;
+	bottom: 69px;
+	z-index: 2;
+
+	display: none;
+	width: 50px;
+	height: 50px;
+	padding: 11px;
+
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+
+  color: transparent;
+	background: fade(@rich-color, 10%);
+	border: 4px solid fade(@contrast-color, 10%);
+	border-radius: 25px;
+
+	transition: width 0.75s 0.75s, color 0.75s, background 0.75s 0.75s, border 0.75s 0.75s;
+
+	&::before {
+		content: '';
+
+		position: absolute;
+		top: 9px;
+		left: 11px;
+
+		width: 20px;
+		height: 20px;
+
+		transform: rotate(90deg);
+
+		background: transparent url('../images/arrow.svg') no-repeat 0 0;
+		background-size: contain;
+		opacity: 0.5;
+
+		transition: opacity 0.75s 0.75s;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:focus,
+	&:hover {
+		width: 100px;
+
+		color: @contrast-color;
+		background: fade(@theme-color-1, 75%);
+		border: 4px solid fade(@contrast-color, 75%);
+
+		transition: width 0.75s, color 0.75s 0.75s, background 0.75s, border 0.75s;
+
+		&::before {
+			opacity: 0;
+
+			transition: opacity 0.75s;
+		}
+	}
+
+	&:active {
+		background: lighten(fade(@theme-color-1, 75%), 5%);
+	}
+}
+
+@media (min-width: @tablet) {
+	.back {
+		bottom: 15px;
+
+		padding: 10px;
+
+		font-size: 16px;
+	}
+}

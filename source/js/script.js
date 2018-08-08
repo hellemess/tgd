@@ -166,4 +166,11 @@
 
 		addHandler(moreBtn, addPictures);
 	}
+
+	const header = document.querySelector(`header`);
+	const backBtn = document.querySelector(`.back`);
+
+	window.addEventListener(`scroll`, (evt) => {
+		backBtn.style.display = header.getBoundingClientRect().bottom < 0 ? `block` : `none`;
+	})
 })();
