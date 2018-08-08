@@ -5,56 +5,6 @@
 	overflow: hidden;
 }
 
-.welcome__circle {
-	position: absolute;
-
-	opacity: 0.25;
-
-	stroke: @theme-color-1;
-
-	animation-name: rotate;
-	animation-duration: 1.5s;
-	animation-fill-mode: forwards;
-
-	&--inner {
-		top: 186px;
-    left: 54px;
-
-    width: 165px;
-    height: 165px;
-
-		transform: rotate(360deg);
-
-		stroke: @theme-color-2;
-
-		animation-delay: 1.5s;
-	}
-
-	&--middle {
-		top: 90px;
-		left: -45px;
-
-		width: 360px;
-		height: 360px;
-
-		transform: rotate(135deg);
-
-		animation-delay: 1s;
-	}
-
-	&--outer {
-		top: -7px;
-		left: -145px;
-
-		width: 562px;
-		height: 562px;
-
-		transform: rotate(80deg);
-
-		animation-delay: 0.5s;
-	}
-}
-
 .welcome__container {
 	display: flex;
 	height: ~'calc(100vh - 139px)';
@@ -294,10 +244,6 @@
 }
 
 @media (min-width: @large-desktop) {
-	.welcome__circles {
-		position: relative;
-	}
-
 	.welcome__container {
 		width: 615px;
 		height: ~'calc(100vh - 110px)';

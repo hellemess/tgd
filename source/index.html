@@ -8,6 +8,18 @@
 </head>
 <body>
   <svg style="display: none;">
+    <symbol id="logo" viewBox="0 0 92.604 105.833">
+      <g transform="translate(0 -191.167)">
+        <circle cx="46.302" cy="237.469" r="6.615" fill="#14b4c8" fill-rule="evenodd" paint-order="markers fill stroke"/>
+        <path d="M62.839 237.469a16.537 16.537 0 0 1-8.269 14.32 16.537 16.537 0 0 1-16.536 0 16.537 16.537 0 0 1-8.269-14.32" fill="none" stroke="#14b4c8" stroke-width="6.615" stroke-linecap="round" stroke-linejoin="round" paint-order="markers fill stroke"/>
+        <path d="M76.068 237.469a29.766 29.766 0 0 1-14.883 25.778 29.766 29.766 0 0 1-29.766 0 29.766 29.766 0 0 1-14.883-25.778" fill="none" stroke="#14b4c8" stroke-width="6.615" stroke-linecap="round" stroke-linejoin="round" paint-order="markers fill stroke"/>
+        <path d="M89.297 237.469a42.995 42.995 0 0 1-21.498 37.234 42.995 42.995 0 0 1-42.994 0A42.995 42.995 0 0 1 3.307 237.47" fill="none" stroke="#14b4c8" stroke-width="6.615" stroke-linecap="round" stroke-linejoin="round" paint-order="markers fill stroke"/>
+        <path d="M11.083 212.808a42.995 42.995 0 0 1 35.22-18.334 42.995 42.995 0 0 1 35.218 18.334" fill="none" stroke="#f58728" stroke-width="6.615" stroke-linecap="round" stroke-linejoin="round" paint-order="markers fill stroke"/>
+        <path d="M21.92 220.396a29.766 29.766 0 0 1 24.382-12.693 29.766 29.766 0 0 1 24.383 12.693M32.756 227.984a16.537 16.537 0 0 1 13.546-7.052 16.537 16.537 0 0 1 13.546 7.052" fill="none" stroke="#f58728" stroke-width="6.615" stroke-linecap="round" stroke-linejoin="round" paint-order="markers fill stroke"/>
+        <path d="M38.407 293.688l15.79.01" fill="none" stroke="#14b4c8" stroke-width="6.605" stroke-linecap="round"/>
+        <path d="M46.312 240.715l-.02 51.716" fill="none" stroke="#14b4c8" stroke-width="6.401" stroke-linecap="round"/>
+      </g>
+    </symbol>
     <symbol id="circle-inner" viewBox="0 0 92.604 92.604">
       <path d="M77.39 46.31a31.094 31.094 0 0 1-19.196 28.727 31.094 31.094 0 0 1-33.886-6.74 31.094 31.094 0 0 1-6.74-33.887 31.094 31.094 0 0 1 28.727-19.195" fill="none" stroke-width="30.427" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
@@ -22,7 +34,9 @@
   <header class="header">
     <div class="header__container">
       <a class="header__logo">
-        <img src="http://via.placeholder.com/150x150" alt="День еврейских знаний в Санкт-Петербурге" width="50" height="50">
+        <svg aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+        </svg>
       </a>
       <nav class="header__menu">
         <ul class="header__menu-list">
@@ -33,7 +47,7 @@
             <a class="header__menu-link" href="#schedule">Программа</a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="#">Как добраться</a>
+            <a class="header__menu-link" href="#address">Как добраться</a>
           </li>
         </ul>
         <a class="header__register" href="#">Зарегистрироваться</a>
@@ -42,14 +56,14 @@
   </header>
   <main>
     <section class="welcome">
-      <div class="welcome__circles">
-        <svg class="welcome__circle  welcome__circle--outer" aria-hidden="true">
+      <div class="circles">
+        <svg class="circles__item  circles__item--outer" aria-hidden="true">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#circle-outer"></use>
         </svg>
-        <svg class="welcome__circle  welcome__circle--middle" aria-hidden="true">
+        <svg class="circles__item  circles__item--middle" aria-hidden="true">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#circle-middle"></use>
         </svg>
-        <svg class="welcome__circle  welcome__circle--inner" aria-hidden="true">
+        <svg class="circles__item  circles__item--inner" aria-hidden="true">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#circle-inner"></use>
         </svg>
       </div>
@@ -455,7 +469,94 @@
         <button class="gallery__more" type="button">Еще фотографии</button>
       </div>
     </section>
+    <section class="funds">
+      <h2 class="funds__heading">Нас поддерживают</h2>
+      <div class="circles">
+        <svg class="circles__item  circles__item--outer" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#circle-outer"></use>
+        </svg>
+        <svg class="circles__item  circles__item--middle" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#circle-middle"></use>
+        </svg>
+        <svg class="circles__item  circles__item--inner" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#circle-inner"></use>
+        </svg>
+      </div>
+      <ul class="funds__list">
+        <li class="funds__item">
+          <a class="funds__link" href="#" target="_blank">
+            <img src="http://via.placeholder.com/150x150/14b4c8/ffffff" alt="Название фонда">
+          </a>
+        </li>
+        <li class="funds__item">
+          <a class="funds__link" href="#" target="_blank">
+            <img src="http://via.placeholder.com/150x150/f58728/ffffff" alt="Название фонда">
+          </a>
+        </li>
+        <li class="funds__item">
+          <a class="funds__link" href="#" target="_blank">
+            <img src="http://via.placeholder.com/150x150/14b4c8/ffffff" alt="Название фонда">
+          </a>
+        </li>
+        <li class="funds__item">
+          <a class="funds__link" href="#" target="_blank">
+            <img src="http://via.placeholder.com/150x150/f58728/ffffff" alt="Название фонда">
+          </a>
+        </li>
+        <li class="funds__item">
+          <a class="funds__link" href="#" target="_blank">
+            <img src="http://via.placeholder.com/150x150/14b4c8/ffffff" alt="Название фонда">
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="address" id="address">
+      <div class="address__container">
+        <h2 class="address__heading">Как добраться</h2>
+        <div class="address__map">
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa4734be286f9ae09561bfaffa7123bf7a11a0f56322b9483df79396b9f38a771&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+        <div class="address__desc">
+          <p>
+            Всемирный день еврейских знаний в Санкт-Петербурге пройдет по адресу:
+            <b>ул. Большая Разночинная, 25А, дом еврейской культуры «ЕСОД».</b>
+            </p>
+          <p>
+            Здание «ЕСОД» располагается в шаговой доступности от:
+            <ul>
+              <li>станции метро «Чкаловская»,</li>
+              <li>
+                остановок автобусов:
+                <ul>
+                  <li>1,</li>
+                  <li>5М,</li>
+                  <li>5МА,</li>
+                  <li>14,</li>
+                  <li>25,</li>
+                  <li>46,</li>
+                  <li>185,</li>
+                  <li>191,</li>
+                </ul>
+              </li>
+              <li>
+                и маршруток:
+                <ul>
+                  <li>120,</li>
+                  <li>131.</li>
+                </ul>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="footer">
+    <div class="footer__copyright">
+      <span>©</span>
+      Ресурсный центр еврейского образования, 2014–2018
+    </div>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>
