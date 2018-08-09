@@ -1,3 +1,54 @@
 .session {
-	display: none;
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  height: 100vh;
+  padding: 15px;
+  overflow: scroll;
+
+  background: @contrast-color;
+}
+
+.session__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  background: @theme-color-2 url('../images/close.svg') no-repeat center;
+  background-size: 15px;
+  border: none;
+  border-radius: 50%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: lighten(@theme-color-2, 10%);
+  }
+
+  &:active {
+    background-color: lighten(@theme-color-2, 15%);
+  }
+}
+
+.session__picture {
+  padding-right: 65px;
+}
+
+.session__picture img {
+  width: 100%;
+  height: ~'calc(100vw - 85px)';
+  object-fit: cover;
+
+  border-radius: 50%;
 }

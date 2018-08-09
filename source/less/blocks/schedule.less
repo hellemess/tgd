@@ -1,325 +1,325 @@
 .schedule {
-	padding-top: 15px;
+  padding-top: 15px;
 }
 
 .schedule__heading {
-	margin: 0;
-	margin-right: 15px;
-	margin-left: 15px;
+  margin: 0;
+  margin-right: 15px;
+  margin-left: 15px;
 
-	font-size: @mobile-h1-size;
-	line-height: 1.2;
-	letter-spacing: 2px;
-	text-transform: uppercase;
+  font-size: @mobile-h1-size;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 
-	color: darken(@theme-color-2, 5%);
+  color: darken(@theme-color-2, 5%);
 }
 
 .schedule__container {
-	display: flex;
-	margin-left: 15px;
+  display: flex;
+  margin-left: 15px;
 
-	border-bottom: 2px solid @theme-color-1;
+  border-bottom: 2px solid @theme-color-1;
 
-	&:first-of-type {
-		margin-top: 15px;
-	}
+  &:first-of-type {
+    margin-top: 15px;
+  }
 
-	&:last-child {
-		border-bottom: none;
-	}
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .schedule__room {
-	width: 25%;
+  width: 25%;
 
-	flex-shrink: 0;
-	align-self: center;
+  flex-shrink: 0;
+  align-self: center;
 
-	color: @theme-color-2;
+  color: @theme-color-2;
 }
 
 .schedule__container:nth-of-type(2n) .schedule__room {
-	color: @theme-color-1;
+  color: @theme-color-1;
 }
 
 .schedule__frame {
-	position: relative;
+  position: relative;
 
-	width: 75%;
-	overflow: hidden;
+  width: 75%;
+  overflow: hidden;
 }
 
 .schedule__list {
-	.reset-list();
+  .reset-list();
 
-	position: relative;
-	left: 0;
+  position: relative;
+  left: 0;
 
-	display: flex;
-	width: 100%;
+  display: flex;
+  width: 100%;
 
-	transition: left 1.5s;
+  transition: left 1.5s;
 }
 
 .schedule__item {
-	position: relative;
-	left: -4px;
-	width: 100%;
-	padding: 15px;
-	padding-bottom: 41px;
+  position: relative;
+  left: -4px;
+  width: 100%;
+  padding: 15px;
+  padding-bottom: 41px;
 
-	flex-shrink: 0;
+  flex-shrink: 0;
 
-	color: @contrast-color;
-	background: @theme-color-2;
-	border-right: 2px solid @theme-color-1;
-	box-shadow: inset 0 0 0 4px @contrast-color;
+  color: @contrast-color;
+  background: @theme-color-2;
+  border-right: 2px solid @theme-color-1;
+  box-shadow: inset 0 0 0 4px @contrast-color;
 
-	&--recreation {
-		background: @grey-color;
-	}
+  &--recreation {
+    background: @grey-color;
+  }
 }
 
 .schedule__container:nth-of-type(2n) .schedule__item {
-	background: @theme-color-1;
+  background: @theme-color-1;
 
-	&--recreation {
-		background: @grey-color;
-	}
+  &--recreation {
+    background: @grey-color;
+  }
 }
 
 .schedule__time {
-	display: inline-block;
-	padding-top: 2px;
-	padding-right: 4px;
-	padding-bottom: 2px;
-	padding-left: 4px;
+  display: inline-block;
+  padding-top: 2px;
+  padding-right: 4px;
+  padding-bottom: 2px;
+  padding-left: 4px;
 
-	background: fade(@rich-color, 10%);
+  background: fade(@rich-color, 10%);
 }
 
 .schedule__parallel-list {
-	margin: 0;
-	margin-top: 15px;
-	padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
 
-	counter-reset: item;
+  counter-reset: item;
 }
 
 .schedule__parallel-item {
-	display: inline;
+  display: inline;
 
-	&::before {
-		content: counter(item) '. ';
-		counter-increment: item;
-	}
+  &::before {
+    content: counter(item) '. ';
+    counter-increment: item;
+  }
 
-	&::after {
-		content: ' / ';
-	}
+  &::after {
+    content: ' / ';
+  }
 
-	&:last-child::after {
-		display: none;
-	}
+  &:last-child::after {
+    display: none;
+  }
 }
 
 .schedule__item abbr {
-	padding-right: 2px;
+  padding-right: 2px;
 
-	text-decoration: none;
+  text-decoration: none;
 
-	background: fade(@rich-color, 10%);
+  background: fade(@rich-color, 10%);
 }
 
 .schedule__session {
-	margin: 0;
-	margin-top: 15px;
+  margin: 0;
+  margin-top: 15px;
 
-	font-weight: 400;
+  font-weight: 400;
   font-size: @mobile-size;
 }
 
 .schedule__session b {
-	display: block;
+  display: block;
 }
 
 .schedule__item small {
-	font-size: 14px;
-	letter-spacing: 1px;
+  font-size: 14px;
+  letter-spacing: 1px;
 
-	opacity: 0.75;
+  opacity: 0.75;
 }
 
 .schedule__recreation {
-	margin-top: 15px;
+  margin-top: 15px;
 }
 
 .schedule__switch {
-	position: absolute;
+  position: absolute;
   right: 4px;
   bottom: 0;
 
   display: flex;
   width: 100%;
-	height: 100%;
+  height: 100%;
 }
 
 .schedule__btn {
-	position: relative;
+  position: relative;
 
-	width: 50%;
+  width: 50%;
 
-	background: transparent;
-	background-size: 25px;
-	border: none;
-	opacity: 0.5;
+  background: transparent;
+  background-size: 25px;
+  border: none;
+  opacity: 0.5;
 
-	&::before {
-		content: '';
+  &::before {
+    content: '';
 
-		position: absolute;
-		bottom: 15px;
+    position: absolute;
+    bottom: 15px;
 
-		width: 20px;
-		height: 20px;
+    width: 20px;
+    height: 20px;
 
-		background: transparent url('../images/arrow.svg') no-repeat 0 0;
-		background-size: contain;
+    background: transparent url('../images/arrow.svg') no-repeat 0 0;
+    background-size: contain;
 
-		cursor: pointer;
-	}
+    cursor: pointer;
+  }
 
-	&--prev {
-		&::before {
-			left: 15px;
-		}
-	}
+  &--prev {
+    &::before {
+      left: 15px;
+    }
+  }
 
-	&--next {
-		&::before {
-			right: 15px;
+  &--next {
+    &::before {
+      right: 15px;
 
-			transform: rotate(180deg);
-		}
-	}
+      transform: rotate(180deg);
+    }
+  }
 
-	&--notice {
-		animation-name: blink;
-		animation-duration: 2s;
-		animation-iteration-count: infinite;
-	}
+  &--notice {
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
 
-	&:hover,
-	&:focus {
-		opacity: 1;
-	}
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 
-	&:focus {
-		outline: none;
-	}
+  &:focus {
+    outline: none;
+  }
 
-	&:active {
-		opacity: 0.75;
-	}
+  &:active {
+    opacity: 0.75;
+  }
 
-	&:disabled {
-		visibility: hidden;
-	}
+  &:disabled {
+    visibility: hidden;
+  }
 }
 
 @media (min-width: @tablet) {
-	.schedule__heading {
-		font-size: @h1-size;
-	}
+  .schedule__heading {
+    font-size: @h1-size;
+  }
 
-	.schedule__item {
-		width: 50%;
+  .schedule__item {
+    width: 50%;
 
-		&--common {
-			width: 100%;
-		}
-	}
+    &--common {
+      width: 100%;
+    }
+  }
 
-	.schedule__session {
-		font-size: @font-size;
-	}
+  .schedule__session {
+    font-size: @font-size;
+  }
 }
 
 @media (min-width: @small-desktop) {
-	.schedule__item {
-		width: 33.3333333%;
+  .schedule__item {
+    width: 33.3333333%;
 
-		&--common {
-			width: 100%;
-		}
-	}
+    &--common {
+      width: 100%;
+    }
+  }
 }
 
 @media (min-width: @desktop) {
-	.schedule {
-		width: 1050px;
-		margin-right: auto;
-		margin-left: auto;
-		padding-top: 30px;
-	}
+  .schedule {
+    width: 1050px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 30px;
+  }
 
-	.schedule__heading {
-		font-size: @desktop-h1-size;
-	}
+  .schedule__heading {
+    font-size: @desktop-h1-size;
+  }
 
-	.schedule__container {
-		&:first-of-type {
-			margin-top: 30px;
-		}
-	}
+  .schedule__container {
+    &:first-of-type {
+      margin-top: 30px;
+    }
+  }
 
-	.schedule__room {
-		width: 15%;
-	}
+  .schedule__room {
+    width: 15%;
+  }
 
-	.schedule__frame {
-		width: 85%;
-	}
+  .schedule__frame {
+    width: 85%;
+  }
 
-	.schedule__item {
-		width: 25%;
+  .schedule__item {
+    width: 25%;
 
-		&--common {
-			width: 100%;
-		}
-	}
+    &--common {
+      width: 100%;
+    }
+  }
 
-	.schedule__session {
-		font-size: @desktop-size;
-	}
+  .schedule__session {
+    font-size: @desktop-size;
+  }
 }
 
 @media (min-width: @large-desktop) {
-	.schedule {
-		width: 1280px;
-		padding-top: 50px;
-	}
+  .schedule {
+    width: 1280px;
+    padding-top: 50px;
+  }
 
-	.schedule__heading {
-		font-size: @large-desktop-h1-size;
-	}
+  .schedule__heading {
+    font-size: @large-desktop-h1-size;
+  }
 
-	.schedule__container {
-		&:first-of-type {
-			margin-top: 50px;
-		}
-	}
+  .schedule__container {
+    &:first-of-type {
+      margin-top: 50px;
+    }
+  }
 
-	.schedule__room {
-		width: 10%;
-	}
+  .schedule__room {
+    width: 10%;
+  }
 
-	.schedule__frame {
-		width: 90%;
-	}
+  .schedule__frame {
+    width: 90%;
+  }
 
-	.schedule__session {
-		font-size: @large-desktop-size;
-	}
+  .schedule__session {
+    font-size: @large-desktop-size;
+  }
 }
