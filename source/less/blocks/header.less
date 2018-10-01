@@ -53,6 +53,9 @@
   text-decoration: none;
 
   color: @rich-color;
+  background: transparent;
+
+  transition: background @t @tf;
 
   &:focus {
     .focus();
@@ -83,6 +86,8 @@
 
   color: @contrast-color;
   background: @theme-color-1;
+
+  transition: background @t @tf;
 
   &:focus {
     .focus();

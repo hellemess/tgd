@@ -59,6 +59,8 @@
 
   cursor: pointer;
 
+  transition: background-color @t @tf;
+
   &--prev {
     left: 15px;
   }
@@ -138,6 +140,8 @@
 
   color: @contrast-color;
   background: fade(@rich-color, 40%);
+
+  transition: background @t @tf;
 
   &:focus {
     outline: none;
@@ -239,6 +243,8 @@
     border: none;
 
     cursor: pointer;
+
+    transition: background @t @tf;
 
     &:focus {
       box-shadow:
